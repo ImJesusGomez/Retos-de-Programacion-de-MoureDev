@@ -37,13 +37,15 @@ public class Anagrama {
         if (primerPalabra.equals(segundaPalabra) || primerPalabra.length() != segundaPalabra.length()) {
             esAnagrama = false;
         } else {
-            // Usamos un ciclo for para recorrer cada letra de la primera palabra y buscarla en la segunda palabra
+            // Convertimos las dos palabras en un arreglo
             char[] arrayPrimeraPalabra = primerPalabra.toCharArray();
             char[] arraySegundaPalabra = segundaPalabra.toCharArray();
 
+            // Ordenamos los arreglos
             Arrays.sort(arrayPrimeraPalabra);
             Arrays.sort(arraySegundaPalabra);
             
+            // Comprobamos si contienen el mismo contenido
             esAnagrama = (Arrays.equals(arrayPrimeraPalabra, arraySegundaPalabra));
         }
 
